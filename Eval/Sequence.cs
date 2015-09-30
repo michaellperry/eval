@@ -7,15 +7,16 @@ namespace Eval
     {
         public static IEnumerable<int> GetOddNumbers(IEnumerable<int> numbers)
         {
-            List<int> odds = numbers.Where(n => n % 2 != 0).ToList();
+            var odds = numbers.Where(n => n % 2 != 0).ToList();
             return odds;
         }
 
-        public static IEnumerable<int> GetPositiveIntegers(int begin, int end)
+        public static IEnumerable<int> GetPositiveIntegers()
         {
-            for (int i = begin; i <= end; i++)
+            int i = 1;
+            while (true)
             {
-                yield return i;
+                yield return i++;
             }
 
         }
