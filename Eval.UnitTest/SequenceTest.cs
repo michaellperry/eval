@@ -24,14 +24,14 @@ namespace Eval.UnitTest
             Assert.IsFalse(odds.Contains(6));
             Assert.IsFalse(odds.Contains(12));
             Assert.IsFalse(odds.Contains(16));
-            
+
         }
 
         [TestMethod]
         public void CanExamineInfiniteSet()
         {
             List<int> odds = Sequence
-                .GetOddNumbers(Sequence.GetPositiveIntegers(1,10))
+                .GetOddNumbers(Sequence.GetPositiveIntegers())
                 .Take(10)
                 .ToList();
 
@@ -46,7 +46,7 @@ namespace Eval.UnitTest
             Assert.IsFalse(odds.Contains(6));
             Assert.IsFalse(odds.Contains(8));
             Assert.IsFalse(odds.Contains(10));
-          
+
 
         }
     }
