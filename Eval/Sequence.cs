@@ -7,7 +7,7 @@ namespace Eval
     {
         public static IEnumerable<int> GetOddNumbers(IEnumerable<int> numbers)
         {
-            var odds = numbers.Where(n => n % 2 != 0).Take(10).ToList();
+            var odds = numbers.Where(n => n % 2 != 0);
             return odds;
         }
 
