@@ -1,8 +1,5 @@
-﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Eval
 {
@@ -10,12 +7,18 @@ namespace Eval
     {
         public static IEnumerable<int> GetOddNumbers(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            var odds = numbers.Where(n => n % 2 != 0);
+            return odds;
         }
 
         public static IEnumerable<int> GetPositiveIntegers()
         {
-            throw new NotImplementedException();
+            int i = 1;
+            while (true)
+            {
+                yield return i++;
+            }
+
         }
     }
 }
